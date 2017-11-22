@@ -24,7 +24,7 @@
                 <h1 class="header-ynov">Plateforme CV</h1>
             </div>
         </div>
-        <div id="NavBarSite" class="row  align-items-center pb-2">
+        <div id="NavBarSite" class="row align-items-center navbarsite">
             <div class="col-11">
                 <nav class="nav nav-pills nav-fill">
                     <a class="bar-nav" href="#">Accueil</a>
@@ -38,11 +38,11 @@
         </div>
         <div id="NavBarCV">
             <nav class="nav nav-tabs nav-tab-dark" id="myTab" role="tablist">
-                <a class="nav-item nav-link active nav-tab-dark-text" id="nav-profil-cv-tab" data-toggle="tab" href="#nav-profil-cv" role="tab" aria-controls="nav-profil-cv" aria-selected="true">Profil</a>
-                <a class="nav-item nav-link nav-tab-dark-text" id="nav-formations-tab" data-toggle="tab" href="#nav-formations" role="tab" aria-controls="nav-formations" aria-selected="false">Formations</a>
-                <a class="nav-item nav-link nav-tab-dark-text" id="nav-langages-tab" data-toggle="tab" href="#nav-langages" role="tab" aria-controls="nav-langages" aria-selected="false">Langages</a>
-                <a class="nav-item nav-link nav-tab-dark-text" id="nav-experiences-tab" data-toggle="tab" href="#nav-experiences" role="tab" aria-controls="nav-experiences" aria-selected="false">Experiences</a>
-                <a class="nav-item nav-link nav-tab-dark-text" id="nav-divers-tab" data-toggle="tab" href="#nav-divers" role="tab" aria-controls="nav-divers" aria-selected="false">Divers</a>
+                <a class="nav-tab-dark-text nav-item nav-link active" id="nav-profil-cv-tab" data-toggle="tab" href="#nav-profil-cv" role="tab" aria-controls="nav-profil-cv" aria-selected="true">Profil</a>
+                <a class="nav-tab-dark-text nav-item nav-link" id="nav-formations-tab" data-toggle="tab" href="#nav-formations" role="tab" aria-controls="nav-formations" aria-selected="false">Formations</a>
+                <a class="nav-tab-dark-text nav-item nav-link" id="nav-langages-tab" data-toggle="tab" href="#nav-langages" role="tab" aria-controls="nav-langages" aria-selected="false">Langages</a>
+                <a class="nav-tab-dark-text nav-item nav-link" id="nav-experiences-tab" data-toggle="tab" href="#nav-experiences" role="tab" aria-controls="nav-experiences" aria-selected="false">Experiences</a>
+                <a class="nav-tab-dark-text nav-item nav-link" id="nav-divers-tab" data-toggle="tab" href="#nav-divers" role="tab" aria-controls="nav-divers" aria-selected="false">Divers</a>
             </nav>
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active page-border" id="nav-profil-cv" role="tabpanel" aria-labelledby="nav-profil-cv-tab">
@@ -66,7 +66,7 @@
                                         <input type="text" class="form-control" id="ville" placeholder="Ville" required></div>
                                 </div>
                                 <label class="pt-2">Telephone *</label>
-                                <input type="tel" class="form-control" id="telephone" placeholder="+33 X XX XX XX XX" required>
+                                <input type="tel" class="form-control" id="telephone" placeholder="XX XX XX XX XX" required>
                                 <label class="pt-2">Email *</label>
                                 <input type="email" class="form-control" id="email" placeholder="nom@exemple.com" required>
                                 <label class="pt-2">Date de naissance *</label>
@@ -75,7 +75,11 @@
                             <button class="btn btn-primary" type="submit">Submit form</button>
                         </form>
                         <div class="col-6 text-center pt-4">
-                            <img src="../images/suchwow.jpg" width="300" height="400">
+                            <p class="photoIDfond">
+                                <img src="../images/suchwow.jpg" width="350" height="450">
+                            </p>
+                            <label class="pt-2">Choisir sa photo de profil</label>
+                            <input type="file" name="photoCV" />
                         </div>
                     </div>
                 </div>
