@@ -1,0 +1,72 @@
+[Fri Dec 01 10:22:37 2017] [notice] Digest: generating secret for digest authentication ...
+[Fri Dec 01 10:22:37 2017] [notice] Digest: done
+[Fri Dec 01 10:22:37 2017] [info] mod_fcgid: Process manager 391302 started
+[Fri Dec 01 10:22:37 2017] [notice] Apache/2.2.32 (Unix) mod_fcgid/2.3.9 configured -- resuming normal operations
+[Fri Dec 01 10:22:37 2017] [info] Server built: Jan 17 2017 16:48:41
+[Fri Dec 01 10:22:39 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Fri Dec 01 10:26:01 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Fri Dec 01 10:56:14 2017] [info] removed PID file /home/ynovcv/admin/config/apache/run/apache.pid (pid=391289)
+[Fri Dec 01 10:56:14 2017] [notice] caught SIGTERM, shutting down
+[Fri Dec 01 10:56:14 2017] [info] mod_fcgid: Process manager 391302 stopped
+[Sat Dec 02 19:22:39 2017] [notice] Digest: generating secret for digest authentication ...
+[Sat Dec 02 19:22:39 2017] [notice] Digest: done
+[Sat Dec 02 19:22:39 2017] [info] mod_fcgid: Process manager 3813656 started
+[Sat Dec 02 19:22:39 2017] [notice] Apache/2.2.32 (Unix) mod_fcgid/2.3.9 configured -- resuming normal operations
+[Sat Dec 02 19:22:39 2017] [info] Server built: Jan 17 2017 16:48:41
+[Sat Dec 02 19:22:41 2017] [error] [client 37.252.190.165] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Sat Dec 02 19:52:54 2017] [info] removed PID file /home/ynovcv/admin/config/apache/run/apache.pid (pid=3813644)
+[Sat Dec 02 19:52:54 2017] [notice] caught SIGTERM, shutting down
+[Sat Dec 02 19:52:54 2017] [info] mod_fcgid: Process manager 3813656 stopped
+[Mon Dec 04 13:43:09 2017] [notice] Digest: generating secret for digest authentication ...
+[Mon Dec 04 13:43:09 2017] [notice] Digest: done
+[Mon Dec 04 13:43:09 2017] [info] mod_fcgid: Process manager 221970 started
+[Mon Dec 04 13:43:09 2017] [notice] Apache/2.2.32 (Unix) mod_fcgid/2.3.9 configured -- resuming normal operations
+[Mon Dec 04 13:43:09 2017] [info] Server built: Jan 17 2017 16:48:41
+[Mon Dec 04 13:43:10 2017] [error] [client 37.169.61.194] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Mon Dec 04 14:13:48 2017] [info] removed PID file /home/ynovcv/admin/config/apache/run/apache.pid (pid=221961)
+[Mon Dec 04 14:13:48 2017] [notice] caught SIGTERM, shutting down
+[Mon Dec 04 14:13:48 2017] [info] mod_fcgid: Process manager 221970 stopped
+[Tue Dec 05 12:01:06 2017] [notice] Digest: generating secret for digest authentication ...
+[Tue Dec 05 12:01:06 2017] [notice] Digest: done
+[Tue Dec 05 12:01:06 2017] [info] mod_fcgid: Process manager 1964685 started
+[Tue Dec 05 12:01:06 2017] [notice] Apache/2.2.32 (Unix) mod_fcgid/2.3.9 configured -- resuming normal operations
+[Tue Dec 05 12:01:06 2017] [info] Server built: Jan 17 2017 16:48:41
+[Tue Dec 05 12:01:08 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Tue Dec 05 12:01:09 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico
+[Tue Dec 05 12:31:45 2017] [info] removed PID file /home/ynovcv/admin/config/apache/run/apache.pid (pid=1964677)
+[Tue Dec 05 12:31:45 2017] [notice] caught SIGTERM, shutting down
+[Tue Dec 05 12:31:45 2017] [info] mod_fcgid: Process manager 1964685 stopped
+[Wed Dec 06 09:15:41 2017] [notice] Digest: generating secret for digest authentication ...
+[Wed Dec 06 09:15:41 2017] [notice] Digest: done
+[Wed Dec 06 09:15:41 2017] [info] mod_fcgid: Process manager 1827350 started
+[Wed Dec 06 09:15:41 2017] [notice] Apache/2.2.32 (Unix) mod_fcgid/2.3.9 configured -- resuming normal operations
+[Wed Dec 06 09:15:41 2017] [info] Server built: Jan 17 2017 16:48:41
+[Wed Dec 06 09:15:43 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Wed Dec 06 09:22:15 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico
+[Wed Dec 06 09:59:44 2017] [info] removed PID file /home/ynovcv/admin/config/apache/run/apache.pid (pid=1827338)
+[Wed Dec 06 09:59:44 2017] [notice] caught SIGTERM, shutting down
+[Wed Dec 06 09:59:44 2017] [info] mod_fcgid: Process manager 1827350 stopped
+[Wed Dec 06 10:08:15 2017] [notice] Digest: generating secret for digest authentication ...
+[Wed Dec 06 10:08:15 2017] [notice] Digest: done
+[Wed Dec 06 10:08:15 2017] [info] mod_fcgid: Process manager 2042139 started
+[Wed Dec 06 10:08:15 2017] [notice] Apache/2.2.32 (Unix) mod_fcgid/2.3.9 configured -- resuming normal operations
+[Wed Dec 06 10:08:15 2017] [info] Server built: Jan 17 2017 16:48:41
+[Wed Dec 06 10:08:16 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Wed Dec 06 10:15:16 2017] [info] mod_fcgid: server ynovcv.alwaysdata.net:/usr/bin/php-cgi(2066018) started
+[Wed Dec 06 10:19:22 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/home
+[Wed Dec 06 10:49:43 2017] [info] removed PID file /home/ynovcv/admin/config/apache/run/apache.pid (pid=2042131)
+[Wed Dec 06 10:49:43 2017] [notice] caught SIGTERM, shutting down
+[Wed Dec 06 10:49:43 2017] [info] mod_fcgid: process /usr/bin/php-cgi(2066018) exit(shutting down), terminated by calling exit(), return code: 0
+[Wed Dec 06 10:49:43 2017] [info] mod_fcgid: Process manager 2042139 stopped
+[Wed Dec 06 10:50:26 2017] [notice] Digest: generating secret for digest authentication ...
+[Wed Dec 06 10:50:26 2017] [notice] Digest: done
+[Wed Dec 06 10:50:26 2017] [info] mod_fcgid: Process manager 2191881 started
+[Wed Dec 06 10:50:26 2017] [notice] Apache/2.2.32 (Unix) mod_fcgid/2.3.9 configured -- resuming normal operations
+[Wed Dec 06 10:50:26 2017] [info] Server built: Jan 17 2017 16:48:41
+[Wed Dec 06 10:50:26 2017] [info] mod_fcgid: server ynovcv.alwaysdata.net:/usr/bin/php-cgi(2192195) started
+[Wed Dec 06 10:59:44 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Wed Dec 06 11:00:20 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Wed Dec 06 11:00:51 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Wed Dec 06 11:10:16 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Wed Dec 06 11:12:02 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico, referer: http://ynovcv.alwaysdata.net/
+[Wed Dec 06 11:27:53 2017] [error] [client 185.77.180.250] File does not exist: /home/ynovcv/www/favicon.ico
