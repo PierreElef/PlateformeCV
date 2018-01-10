@@ -13,22 +13,7 @@ class Monmodel extends CI_Model {
                 return $query->row_array();
         }
 
-        public function insert_entry()
-        {
-                $this->title    = $_POST['title']; // please read the below note
-                $this->content  = $_POST['content'];
-                $this->date     = time();
-
-                $this->db->insert('entries', $this);
+        public function insert_data($data){
+            $this->db->insert('Table_Users', $data);
         }
-
-        public function update_entry()
-        {
-                $this->title    = $_POST['title'];
-                $this->content  = $_POST['content'];
-                $this->date     = time();
-
-                $this->db->update('entries', $this, array('id' => $_POST['id']));
-        }
-
 }
