@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta lan="fr">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title> Création CV </title>
+        <title> Plateforme CV </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="css/bootstrap.css">
@@ -18,6 +18,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
     </head>
 
     <body>
@@ -43,17 +45,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <nav class="nav nav-tabs nav-tab-dark" id="myTab" role="tablist">
                     <a class="nav-tab-dark-text nav-item nav-link active" id="nav-profil-cv-tab" data-toggle="tab" href="#nav-profil-cv" role="tab" aria-controls="nav-profil-cv" aria-selected="true">Profil</a>
                     <a class="nav-tab-dark-text nav-item nav-link" id="nav-formations-tab" data-toggle="tab" href="#nav-formations" role="tab" aria-controls="nav-formations" aria-selected="false">Formations</a>
-                    <a class="nav-tab-dark-text nav-item nav-link" id="nav-langages-tab" data-toggle="tab" href="#nav-langages" role="tab" aria-controls="nav-langages" aria-selected="false">Langages</a>
+                    <a class="nav-tab-dark-text nav-item nav-link" id="nav-competences-tab" data-toggle="tab" href="#nav-competences" role="tab" aria-controls="nav-competences" aria-selected="false">Compétences</a>
                     <a class="nav-tab-dark-text nav-item nav-link" id="nav-experiences-tab" data-toggle="tab" href="#nav-experiences" role="tab" aria-controls="nav-experiences" aria-selected="false">Experiences</a>
                     <a class="nav-tab-dark-text nav-item nav-link" id="nav-divers-tab" data-toggle="tab" href="#nav-divers" role="tab" aria-controls="nav-divers" aria-selected="false">Divers</a>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active page-border" id="nav-profil-cv" role="tabpanel" aria-labelledby="nav-profil-cv-tab">
+                    <div class="tab-pane fade  page-border" id="nav-profil-cv" role="tabpanel" aria-labelledby="nav-profil-cv-tab">
                         <div class="row">
                             <div class="col-6 p-4">
-                                <form class=" form-group">
+                                <form class="form-group" method="POST">
                                     <label class="pt-2">Nom</label>
-                                    <input type="hidden" id="ID" name="ID" value="<?php echo $query['ID'] ?>">
+                                    <input type="hidden" name="ID">
                                     <input type="text" class="form-control" id="sirname" name="sirname" placeholder="Nom" value="<?php echo $query['sirname'] ?>">
                                     <label class="pt-2">Prenom</label>
                                     <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prenom" value="<?php echo $query['firstname'] ?>">
@@ -96,15 +98,167 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
 
                     <div class="tab-pane fade page-border" id="nav-formations" role="tabpanel" aria-labelledby="nav-formations-tab">
-                        <h1>Formation</h1>
-                        <form>
-                            <div id="Formation 1" class="row">
-                                <input type="text" class="form-control" id="nameform1" name="nameform1">
-                            </div>
-                            <button class="btn btn-primary mt-2" type="submit" name="saveButton">Save</button>
-                        </form>
+                        <div class="p-2">
+                            <form method="POST">
+                                <div class="pb-4">
+                                    <form id="Formation 1">
+                                        <h2>Formation 1</h2>
+                                        <label class="pt-2">Nom du diplôme</label>
+                                        <input type="text" class="form-control" id="nameform1" name="nameform1" value="<?php echo $query['nameform1'] ?>">
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <label class="pt-2">Lieu</label>
+                                                <input type="text" class="form-control" id="placeform1" name="placeform1" value="<?php echo $query['placeform1'] ?>">
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="pt-2">Année d'obtention</label>
+                                                <input type="text" class="form-control" id="yearform1" name="yearform1" value="<?php echo $query['yearform1'] ?>">
+                                            </div>
+                                        </div>
+                                        <label class="pt-2">Description</label>
+                                    </form>
+                                    <textarea class="col p-2" rows="4" cols="100" name="descriptform1" form="Formation 1"></textarea>
+                                </div>
+                                <div class="pb-4">
+                                    <form id="Formation 2">
+                                        <h2>Formation 2</h2>
+                                        <label class="pt-2">Nom du diplôme</label>
+                                        <input type="text" class="form-control" id="nameform2" name="nameform2" value="<?php echo $query['nameform2'] ?>">
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <label class="pt-2">Lieu</label>
+                                                <input type="text" class="form-control" id="placeform2" name="placeform2" value="<?php echo $query['placeform2'] ?>">
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="pt-2">Année d'obtention</label>
+                                                <input type="text" class="form-control" id="yearform2" name="yearform2" value="<?php echo $query['yearform2'] ?>">
+                                            </div>
+                                        </div>
+                                        <label class="pt-2">Description</label>
+                                    </form>
+                                    <textarea class="col p-2" rows="4" cols="100" name="descriptform2" form="Formation 2"></textarea>
+                                </div>
+                                <div class="pb-4">
+                                    <form id="Formation 3">
+                                        <h2>Formation 3</h2>
+                                        <label class="pt-2">Nom du diplôme</label>
+                                        <input type="text" class="form-control" id="nameform3" name="nameform3" value="<?php echo $query['nameform3'] ?>">
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <label class="pt-2">Lieu</label>
+                                                <input type="text" class="form-control" id="placeform3" name="placeform3" value="<?php echo $query['placeform3'] ?>">
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="pt-2">Année d'obtention</label>
+                                                <input type="text" class="form-control" id="yearform3" name="yearform3" value="<?php echo $query['yearform3'] ?>">
+                                            </div>
+                                        </div>
+                                        <label class="pt-2">Description</label>
+                                    </form>
+                                    <textarea class="col p-2" rows="4" cols="100" name="descriptform3" form="Formation 3"></textarea>
+                                </div>
+                                <div class="pb-4">
+                                    <form id="Formation 4">
+                                        <h2>Formation 4</h2>
+                                        <label class="pt-2">Nom du diplôme</label>
+                                        <input type="text" class="form-control" id="nameform4" name="nameform4" value="<?php echo $query['nameform4'] ?>">
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <label class="pt-2">Lieu</label>
+                                                <input type="text" class="form-control" id="placeform4" name="placeform4" value="<?php echo $query['placeform4'] ?>">
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="pt-2">Année d'obtention</label>
+                                                <input type="text" class="form-control" id="yearform4" name="yearform4" value="<?php echo $query['yearform4'] ?>">
+                                            </div>
+                                        </div>
+                                        <label class="pt-2">Description</label>
+                                    </form>
+                                    <textarea class="col p-2" rows="4" cols="100" name="descriptform4" form="Formation 4"></textarea>
+                                </div>
+                                <div class="pb-4">
+                                    <form id="Formation 5">
+                                        <h2>Formation 5</h2>
+                                        <label class="pt-2">Nom du diplôme</label>
+                                        <input type="text" class="form-control" id="nameform5" name="nameform5" value="<?php echo $query['nameform5'] ?>">
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <label class="pt-2">Lieu</label>
+                                                <input type="text" class="form-control" id="placeform5" name="placeform5" value="<?php echo $query['placeform5'] ?>">
+                                            </div>
+                                            <div class="col-2">
+                                                <label class="pt-2">Année d'obtention</label>
+                                                <input type="text" class="form-control" id="yearform5" name="yearform5" value="<?php echo $query['yearform5'] ?>">
+                                            </div>
+                                        </div>
+                                        <label class="pt-2">Description</label>
+                                    </form>
+                                    <textarea class="col p-2" rows="4" cols="100" name="descriptform5" form="Formation 5"></textarea>
+                                </div>
+                                <button class="btn btn-primary mt-2" type="submit" name="saveButton">Save</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="tab-pane fade page-border" id="nav-langages" role="tabpanel" aria-labelledby="nav-langages-tab">Langages</div>
+                    <div class="tab-pane fade show active page-border" id="nav-competences" role="tabpanel" aria-labelledby="nav-competences-tab">
+                        <div class="p-2">
+                            <form method="POST">
+                                <div class="col">
+                                    <h3>Langages Web</h3>
+                                    <div class="row">
+                                        <label class="col-2 pt-2">HTML</label>
+                                        <label class="col-1" id="compt1Val"></label>
+                                        <input id="compt1" value="compt1" class="col-9 pl-2" type="range" min="1" max="5" step="1" />
+                                        <script>
+                                            var slideCol1 = document.getElementById("compt1");
+                                            var compt1Val = document.getElementById("compt1Val");
+                                            compt1Val.innerHTML = slideCol1.value;
+                                            slideCol1.oninput = function() {
+                                                compt1Val.innerHTML = this.value;
+                                            }
+
+                                        </script>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-2 pt-2">CSS</label>
+                                        <label class="col-1" id="compt2Val"></label>
+                                        <input id="compt2" value="compt2" class="col-9 pl-2" type="range" min="1" max="5" step="1" />
+                                        <script>
+                                            var slideCol2 = document.getElementById("compt2");
+                                            var compt2Val = document.getElementById("compt2Val");
+                                            compt2Val.innerHTML = slideCol2.value;
+                                            slideCol2.oninput = function() {
+                                                compt2Val.innerHTML = this.value;
+                                            }
+
+                                        </script>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-2 pt-2">JavaScript</label>
+                                        <label class="col-1" id="compt3Val"></label>
+                                        <input id="compt3" value="compt3" class="col-9 pl-2" type="range" min="1" max="5" step="1" />
+                                        <script>
+                                            var slideCol3 = document.getElementById("compt3");
+                                            var compt3Val = document.getElementById("compt3Val");
+                                            compt3Val.innerHTML = slideCol3.value;
+                                            slideCol3.oninput = function() {
+                                                compt3Val.innerHTML = this.value;
+                                            }
+
+                                        </script>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-2 pt-2">PHP</label>
+
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-2 pt-2">PHP</label>
+
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary mt-2" type="submit" name="saveButton">Save</button>
+                            </form>
+                        </div>
+                    </div>
                     <div class="tab-pane fade page-border" id="nav-experiences" role="tabpanel" aria-labelledby="nav-experiences-tab">Experiences</div>
                     <div class="tab-pane fade page-border" id="nav-divers" role="tabpanel" aria-labelledby="nav-divers-tab">Divers</div>
                 </div>

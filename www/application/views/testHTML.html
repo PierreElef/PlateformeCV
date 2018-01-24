@@ -203,24 +203,42 @@
                                 <h3>Langages Web</h3>
                                 <div class="row">
                                     <label class="col-2 pt-2">HTML</label>
-                                    <input id="compt1" value="compt1" class="col-10 pl-2" type="range" min="1" max="5" step="1" />
-                                </div>
-                                <div class="row">
-                                    <p class="col-2"></p>
-                                    <p class="col text-left">1</p>
-                                    <p class="col">2</p>
-                                    <p class="col text-center">3</p>
-                                    <p class="col">4</p>
-                                    <p class="col text-right">5</p>
+                                    <label class="col-1" id="compt1Val"></label>
+                                    <input id="compt1" value="compt1" class="col-9 pl-2" type="range" min="1" max="5" step="1" />
+                                    <script>
+                                        var slideCol1 = document.getElementById("compt1");
+                                        var compt1Val = document.getElementById("compt1Val");
+                                        compt1Val.innerHTML = slideCol1.value;
+                                        slideCol1.oninput = function() {
+                                            compt1Val.innerHTML = this.value;
+                                        }
+                                    </script>
                                 </div>
                                 <div class="row">
                                     <label class="col-2 pt-2">CSS</label>
-                                    <input id="compt2" value="compt2" class="col-1 text-center" type="number" min="1" max="5" step="1" />
-                                    <img src="images/star1.png" height="40">
+                                    <label class="col-1" id="compt2Val"></label>
+                                    <input id="compt2" value="compt2" class="col-9 pl-2" type="range" min="1" max="5" step="1" />
+                                    <script>
+                                        var slideCol2 = document.getElementById("compt2");
+                                        var compt2Val = document.getElementById("compt2Val");
+                                        compt2Val.innerHTML = slideCol2.value;
+                                        slideCol2.oninput = function() {
+                                            compt2Val.innerHTML = this.value;
+                                        }
+                                    </script>
                                 </div>
                                 <div class="row">
                                     <label class="col-2 pt-2">JavaScript</label>
-
+                                    <label class="col-1" id="compt3Val"></label>
+                                    <input id="compt3" value="compt3" class="col-9 pl-2" type="range" min="1" max="5" step="1" />
+                                    <script>
+                                        var slideCol3 = document.getElementById("compt3");
+                                        var compt3Val = document.getElementById("compt3Val");
+                                        compt3Val.innerHTML = slideCol3.value;
+                                        slideCol3.oninput = function() {
+                                            compt3Val.innerHTML = this.value;
+                                        }
+                                    </script>
                                 </div>
                                 <div class="row">
                                     <label class="col-2 pt-2">PHP</label>
