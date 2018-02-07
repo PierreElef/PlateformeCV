@@ -50,219 +50,144 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <a class="nav-tab-dark-text nav-item nav-link" id="nav-divers-tab" data-toggle="tab" href="#nav-divers" role="tab" aria-controls="nav-divers" aria-selected="false">Divers</a>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade  page-border" id="nav-profil-cv" role="tabpanel" aria-labelledby="nav-profil-cv-tab">
-                        <div class="row">
-                            <div class="col-6 p-4">
-                                <form class="form-group" method="POST">
-                                    <label class="pt-2">Nom</label>
-                                    <input type="hidden" name="ID">
-                                    <input type="text" class="form-control" id="sirname" name="sirname" placeholder="Nom" value="<?php echo $query['sirname'] ?>">
-                                    <label class="pt-2">Prenom</label>
-                                    <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prenom" value="<?php echo $query['firstname'] ?>">
-                                    <label class="pt-2">Adresse</label>
-                                    <input type="text" class="form-control" id="postaladress1" name="postaladress1" placeholder="Adresse 1" value="<?php echo $query['postaladress1'] ?>">
-                                    <input type="text" class="form-control mt-1" id="postaladress2" name="postaladress2" placeholder="Adresse 2" value="<?php echo $query['postaladress2'] ?>">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <label class="pt-2">Code postal</label>
-                                            <input type="text" class="form-control" id="postalcode" name="postalcode" placeholder="XXXXX" value="<?php echo $query['postalcode'] ?>">
-                                        </div>
-                                        <div class="col-8">
-                                            <label class="pt-2">Ville</label>
-                                            <input type="text" class="form-control" id="city" name="city" placeholder="Ville" value="<?php echo $query['city'] ?>">
-                                        </div>
+                <div class="tab-pane fade show active page-border" id="nav-profil-cv" role="tabpanel" aria-labelledby="nav-profil-cv-tab">
+                    <div class="row">
+                        <div class="col-6 p-4">
+                            <form class="form-group" method="POST">
+                                <label class="pt-2">Nom</label>
+                                <input type="hidden" name="ID">
+                                <input type="text" class="form-control" id="sirname" name="sirname" placeholder="Nom" value="<?php echo $query['sirname'] ?>">
+                                <label class="pt-2">Prenom</label>
+                                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Prenom" value="<?php echo $query['firstname'] ?>">
+                                <label class="pt-2">Adresse</label>
+                                <input type="text" class="form-control" id="postaladress1" name="postaladress1" placeholder="Adresse 1" value="<?php echo $query['postaladress1'] ?>">
+                                <input type="text" class="form-control mt-1" id="postaladress2" name="postaladress2" placeholder="Adresse 2" value="<?php echo $query['postaladress2'] ?>">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label class="pt-2">Code postal</label>
+                                        <input type="text" class="form-control" id="postalcode" name="postalcode" placeholder="XXXXX" value="<?php echo $query['postalcode'] ?>">
                                     </div>
-                                    <label class="pt-2">Telephone</label>
-                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="XX XX XX XX XX" value="<?php echo $query['phone'] ?>">
-                                    <label class="pt-2">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="nom@exemple.com" value="<?php echo $query['email'] ?>">
-                                    <label class="pt-2">Date de naissance</label>
-                                    <input type="date" class="form-control col-4" id="birthdate" name="birthdate" value="<?php echo $query['birthdate'] ?>">
-                                    <button class="btn btn-primary mt-2" type="submit" name="saveButton">Save</button>
-                                    <p>* Informations obligatoires</p>
-                                    <p>
-                                        <?php echo $query['ID'] ?>
-                                        <?php echo $query['firstname'] ?>
-                                        <?php echo $query['postaladress1'] ?>
-                                    </p>
-                                </form>
-                            </div>
-                            <div class="col-6 text-center pt-4">
-                                <p class=" mx-auto d-block photoIDfond">
-                                    <!--<img src="images/suchwow.jpg" width="350" height="450">-->
+                                    <div class="col-8">
+                                        <label class="pt-2">Ville</label>
+                                        <input type="text" class="form-control" id="city" name="city" placeholder="Ville" value="<?php echo $query['city'] ?>">
+                                    </div>
+                                </div>
+                                <label class="pt-2">Telephone</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="XX XX XX XX XX" value="<?php echo $query['phone'] ?>">
+                                <label class="pt-2">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="nom@exemple.com" value="<?php echo $query['email'] ?>">
+                                <label class="pt-2">Date de naissance</label>
+                                <input type="date" class="form-control col-4" id="birthdate" name="birthdate" value="<?php echo $query['birthdate'] ?>">
+                                <button class="btn btn-primary mt-2" type="submit" name="saveButton">Save</button>
+                                <p>* Informations obligatoires</p>
+                                <p>
+                                    <?php echo $query['ID'] ?>
+                                    <?php echo $query['firstname'] ?>
+                                    <?php echo $query['postaladress1'] ?>
                                 </p>
-                                <label class="pt-2">Choisir sa photo de profil</label>
-                                <input type="file" name="photoCV" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade page-border" id="nav-formations" role="tabpanel" aria-labelledby="nav-formations-tab">
-                        <div class="p-2">
-                            <form method="POST">
-                                <div class="pb-4">
-                                    <form id="Formation 1">
-                                        <h2>Formation 1</h2>
-                                        <label class="pt-2">Nom du diplôme</label>
-                                        <input type="text" class="form-control" id="nameform1" name="nameform1" value="<?php echo $query['nameform1'] ?>">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <label class="pt-2">Lieu</label>
-                                                <input type="text" class="form-control" id="placeform1" name="placeform1" value="<?php echo $query['placeform1'] ?>">
-                                            </div>
-                                            <div class="col-2">
-                                                <label class="pt-2">Année d'obtention</label>
-                                                <input type="text" class="form-control" id="yearform1" name="yearform1" value="<?php echo $query['yearform1'] ?>">
-                                            </div>
-                                        </div>
-                                        <label class="pt-2">Description</label>
-                                    </form>
-                                    <textarea class="col p-2" rows="4" cols="100" name="descriptform1" form="Formation 1"></textarea>
-                                </div>
-                                <div class="pb-4">
-                                    <form id="Formation 2">
-                                        <h2>Formation 2</h2>
-                                        <label class="pt-2">Nom du diplôme</label>
-                                        <input type="text" class="form-control" id="nameform2" name="nameform2" value="<?php echo $query['nameform2'] ?>">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <label class="pt-2">Lieu</label>
-                                                <input type="text" class="form-control" id="placeform2" name="placeform2" value="<?php echo $query['placeform2'] ?>">
-                                            </div>
-                                            <div class="col-2">
-                                                <label class="pt-2">Année d'obtention</label>
-                                                <input type="text" class="form-control" id="yearform2" name="yearform2" value="<?php echo $query['yearform2'] ?>">
-                                            </div>
-                                        </div>
-                                        <label class="pt-2">Description</label>
-                                    </form>
-                                    <textarea class="col p-2" rows="4" cols="100" name="descriptform2" form="Formation 2"></textarea>
-                                </div>
-                                <div class="pb-4">
-                                    <form id="Formation 3">
-                                        <h2>Formation 3</h2>
-                                        <label class="pt-2">Nom du diplôme</label>
-                                        <input type="text" class="form-control" id="nameform3" name="nameform3" value="<?php echo $query['nameform3'] ?>">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <label class="pt-2">Lieu</label>
-                                                <input type="text" class="form-control" id="placeform3" name="placeform3" value="<?php echo $query['placeform3'] ?>">
-                                            </div>
-                                            <div class="col-2">
-                                                <label class="pt-2">Année d'obtention</label>
-                                                <input type="text" class="form-control" id="yearform3" name="yearform3" value="<?php echo $query['yearform3'] ?>">
-                                            </div>
-                                        </div>
-                                        <label class="pt-2">Description</label>
-                                    </form>
-                                    <textarea class="col p-2" rows="4" cols="100" name="descriptform3" form="Formation 3"></textarea>
-                                </div>
-                                <div class="pb-4">
-                                    <form id="Formation 4">
-                                        <h2>Formation 4</h2>
-                                        <label class="pt-2">Nom du diplôme</label>
-                                        <input type="text" class="form-control" id="nameform4" name="nameform4" value="<?php echo $query['nameform4'] ?>">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <label class="pt-2">Lieu</label>
-                                                <input type="text" class="form-control" id="placeform4" name="placeform4" value="<?php echo $query['placeform4'] ?>">
-                                            </div>
-                                            <div class="col-2">
-                                                <label class="pt-2">Année d'obtention</label>
-                                                <input type="text" class="form-control" id="yearform4" name="yearform4" value="<?php echo $query['yearform4'] ?>">
-                                            </div>
-                                        </div>
-                                        <label class="pt-2">Description</label>
-                                    </form>
-                                    <textarea class="col p-2" rows="4" cols="100" name="descriptform4" form="Formation 4"></textarea>
-                                </div>
-                                <div class="pb-4">
-                                    <form id="Formation 5">
-                                        <h2>Formation 5</h2>
-                                        <label class="pt-2">Nom du diplôme</label>
-                                        <input type="text" class="form-control" id="nameform5" name="nameform5" value="<?php echo $query['nameform5'] ?>">
-                                        <div class="row">
-                                            <div class="col-10">
-                                                <label class="pt-2">Lieu</label>
-                                                <input type="text" class="form-control" id="placeform5" name="placeform5" value="<?php echo $query['placeform5'] ?>">
-                                            </div>
-                                            <div class="col-2">
-                                                <label class="pt-2">Année d'obtention</label>
-                                                <input type="text" class="form-control" id="yearform5" name="yearform5" value="<?php echo $query['yearform5'] ?>">
-                                            </div>
-                                        </div>
-                                        <label class="pt-2">Description</label>
-                                    </form>
-                                    <textarea class="col p-2" rows="4" cols="100" name="descriptform5" form="Formation 5"></textarea>
-                                </div>
-                                <button class="btn btn-primary mt-2" type="submit" name="saveButton">Save</button>
                             </form>
                         </div>
-                    </div>
-                    <div class="tab-pane fade show active page-border" id="nav-competences" role="tabpanel" aria-labelledby="nav-competences-tab">
-                        <div class="p-2">
-                            <form method="POST">
-                                <div class="col">
-                                    <h3>Langages Web</h3>
-                                    <div class="row">
-                                        <label class="col-2 pt-2">HTML</label>
-                                        <label class="col-1" id="compt1Val"></label>
-                                        <input id="compt1" value="compt1" class="col-9 pl-2" type="range" min="1" max="5" step="1" />
-                                        <script>
-                                            var slideCol1 = document.getElementById("compt1");
-                                            var compt1Val = document.getElementById("compt1Val");
-                                            compt1Val.innerHTML = slideCol1.value;
-                                            slideCol1.oninput = function() {
-                                                compt1Val.innerHTML = this.value;
-                                            }
-
-                                        </script>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-2 pt-2">CSS</label>
-                                        <label class="col-1" id="compt2Val"></label>
-                                        <input id="compt2" value="compt2" class="col-9 pl-2" type="range" min="1" max="5" step="1" />
-                                        <script>
-                                            var slideCol2 = document.getElementById("compt2");
-                                            var compt2Val = document.getElementById("compt2Val");
-                                            compt2Val.innerHTML = slideCol2.value;
-                                            slideCol2.oninput = function() {
-                                                compt2Val.innerHTML = this.value;
-                                            }
-
-                                        </script>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-2 pt-2">JavaScript</label>
-                                        <label class="col-1" id="compt3Val"></label>
-                                        <input id="compt3" value="compt3" class="col-9 pl-2" type="range" min="1" max="5" step="1" />
-                                        <script>
-                                            var slideCol3 = document.getElementById("compt3");
-                                            var compt3Val = document.getElementById("compt3Val");
-                                            compt3Val.innerHTML = slideCol3.value;
-                                            slideCol3.oninput = function() {
-                                                compt3Val.innerHTML = this.value;
-                                            }
-
-                                        </script>
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-2 pt-2">PHP</label>
-
-                                    </div>
-                                    <div class="row">
-                                        <label class="col-2 pt-2">PHP</label>
-
-                                    </div>
-                                </div>
-                                <button class="btn btn-primary mt-2" type="submit" name="saveButton">Save</button>
-                            </form>
+                        <div class="col-6 text-center pt-4">
+                            <p class=" mx-auto d-block photoIDfond">
+                                <!--<img src="images/suchwow.jpg" width="350" height="450">-->
+                            </p>
+                            <label class="pt-2">Choisir sa photo de profil</label>
+                            <input type="file" name="photoCV" />
                         </div>
                     </div>
-                    <div class="tab-pane fade page-border" id="nav-experiences" role="tabpanel" aria-labelledby="nav-experiences-tab">Experiences</div>
-                    <div class="tab-pane fade page-border" id="nav-divers" role="tabpanel" aria-labelledby="nav-divers-tab">Divers</div>
                 </div>
+
+                <div class="tab-pane fade page-border" id="nav-formations" role="tabpanel" aria-labelledby="nav-formations-tab">
+                    <div class="p-2">
+                        <h2>Formation</h2>
+                        <form method="POST">
+
+                            <div class="pb-4">
+                                <input type="hidden" id="ID" name="ID">
+                                <label class="pt-2">Nom du diplôme</label>
+                                <input type="text" class="form-control" id="name" name="name" value="<?php echo $query['name'] ?>">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <label class="pt-2">Lieu</label>
+                                        <input type="text" class="form-control" id="place" name="place" value="<?php echo $query['place'] ?>">
+                                    </div>
+                                    <div class="col-2">
+                                        <label class="pt-2">Année d'obtention</label>
+                                        <input type="text" class="form-control" id="year" name="year" value="<?php echo $query['year'] ?>">
+                                    </div>
+                                </div>
+                                <label class="pt-2">Description</label>
+                                <textarea class="col p-2" rows="4" cols="100" name="description" form="Formation"></textarea>
+                            </div>
+
+                            <button class="btn btn-primary mt-2" type="submit" name="saveButton">Save</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade page-border" id="nav-competences" role="tabpanel" aria-labelledby="nav-competences-tab">
+                    <div class="p-2">
+                        <h3>Compétences</h3>
+                        <form method="POST">
+
+                            <div class="col">
+                                <div class="row">
+                                    <input type="hidden" id="ID" name="ID">
+                                    <label class="col-2 pt-2">HTML</label>
+                                    <label class="col-1" id="compt1Val"></label>
+                                    <input id="grade" value="compt1" class="col-9 pl-2" type="range" min="1" max="5" step="1" />
+                                    <script>
+                                        var slideCol1 = document.getElementById("compt1");
+                                        var compt1Val = document.getElementById("compt1Val");
+                                        compt1Val.innerHTML = slideCol1.value;
+                                        slideCol1.oninput = function() {
+                                            compt1Val.innerHTML = this.value;
+                                        }
+
+                                    </script>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-primary mt-2" type="submit" name="saveButton">Save</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane fade page-border" id="nav-experiences" role="tabpanel" aria-labelledby="nav-experiences-tab">
+                    <div class="p-2">
+                        <h2>Expérience</h2>
+                        <form method="POST">
+
+                            <div class="pb-4">
+                                <input type="hidden" id="ID" name="ID">
+                                <label class="pt-2">Titre du poste</label>
+                                <input type="text" class="form-control" id="title" name="title" value="<?php echo $query['title'] ?>">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <label class="pt-2">Organisation</label>
+                                        <input type="text" class="form-control" id="organisation" name="organisation" value="<?php echo $query['organisation'] ?>">
+                                    </div>
+                                    <div class="col-2">
+                                        <label class="pt-2">Année de début</label>
+                                        <input type="text" class="form-control" id="dateStart" name="dateStart" value="<?php echo $query['dateStart'] ?>">
+                                    </div>
+                                    <div class="col-2">
+                                        <label class="pt-2">Année de fin</label>
+                                        <input type="text" class="form-control" id="dateStop" name="dateStop" value="<?php echo $query['dateStop'] ?>">
+                                    </div>
+                                </div>
+                                <label class="pt-2">Description du poste</label>
+                                <textarea class="col p-2" rows="4" cols="100" name="description" form="description"></textarea>
+                            </div>
+
+                            <button class="btn btn-primary mt-2" type="submit" name="saveButton">Save</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade page-border" id="nav-divers" role="tabpanel" aria-labelledby="nav-divers-tab">Divers</div>
             </div>
+        </div>
 
             <div id="Footer" class="footer">
                 <div class="row">
